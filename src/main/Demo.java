@@ -15,18 +15,22 @@ public class Demo{
 
     System.out.println("Bonjour, combien de joueurs humain êtes-vous ? (1 ou 2) ");
     String nb_humains=scanner.next();
+    System.out.println(" ");
     if(Integer.parseInt(nb_humains)==1){
       System.out.println("Voulez-vous un adversaire 'intelligent'(tapez : 1) ou qui joue de manière aléatoire (tapez : 2) ?");
-      System.out.println("PS: L'adversaire 'intelligent' ne fonctionne pas avec le puissance4");
+      System.out.println("(NB : L'adversaire 'intelligent' ne fonctionne pas avec le puissance 4, désolé)");
       String IA=scanner.next();
-      if(Integer.parseInt(IA)==1){
+      System.out.println(" ");
+      if(Integer.parseInt(IA)==1){//1 joueur et 1 negamax
         System.out.println("Quel est ton nom ?");
         String nom_j1=scanner.next();
+        System.out.println(" ");
         players.Player player1 = new players.Human(nom_j1,scanner);
         players.Player player2 = new players.NegamaxPlayer();
 
         System.out.println("A quoi veux-tu jouer "+nom_j1+" ? 1 : Nim, 2 : TicTacToe, 3 : Puissance4");
         String choix=scanner.next();
+        System.out.println(" ");
         if(Integer.parseInt(choix)==1){//début de game
           System.out.println("Quel sera la taille du tas d'allumettes :");
           String taille_tas=scanner.next();
@@ -48,14 +52,17 @@ public class Demo{
 
         }
         else{
-          games.Puissance jeu = new games.Puissance(player1,player2);
+          System.out.println("Vous jouez contre un joueur qui joue aléatoirement");
+          Random randInteger = new java.util.Random();//on génére un joueur random
+          players.Player player3 = new players.RandomPlayer(randInteger);
+          games.Puissance jeu = new games.Puissance(player1,player3);
           plays.Orchestrator orchestrator = new plays.Orchestrator(jeu);
           orchestrator.play();
           scanner.close();
         }
 
       }
-      else{
+      else{//1 joueur et 1 random
         System.out.println("Quel est ton nom ?");
         String nom_j1=scanner.next();
         Random randInteger = new java.util.Random();//on génére un joueur random

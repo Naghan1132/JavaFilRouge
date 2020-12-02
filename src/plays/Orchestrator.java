@@ -15,9 +15,10 @@ public class Orchestrator{
 
 
   public void play(){
+    System.out.print("\033[H\033[2J");//clear de console
+    System.out.flush();//clear de console  
     System.out.println(" ");
     System.out.println("Bienvenue dans votre partie");
-    System.out.println(" ");
     while (jeu.isOver()==false){
       System.out.println(" ");
       System.out.println("-----------------------------------------------");
