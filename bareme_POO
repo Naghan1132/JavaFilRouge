@@ -1,0 +1,32 @@
+Modalités détaillées du contrôle continu
+
+Note importante : les éventuelles questions générales sont à poser via le forum « Questions intro. POO », depuis la page d'accueil du cours, afin que toute la promotion puisse voir les réponses.
+
+Le contrôle continu consiste en l'ensemble des TP fil rouge réalisés au cours du semestre. Il est à réaliser en groupes ; la liste des groupes est sur la page principale du cours ; vous devez êtes inscrits dans un groupe pour rendre le devoir et obtenir une note de CC.
+
+Le travail est à rendre au plus tard le mercredi 16 décembre à 23 h 59, via eCampus ; un seul membre de chaque groupe doit le rendre.
+
+--------------------------------------------------------------------------------------------------------------------
+Contenu
+
+Le contenu précis à rendre est le suivant :
+
+    les trois packages players, games, et plays demandés dans les énoncés de TP
+    un package main contenant
+        une classe exécutable appelant tous les tests fournis ; le code de cette classe est fourni sur la page du cours, il vous appartient de commenter les appels à des tests correspondant à des méthodes/classes que vous n'auriez pas réalisées ; vous pouvez laisser les tests correspondant à des méthodes réalisées, même si les tests ne passent pas ; cela nous permettra de voir facilement que vous avez essayé d'implémenter la méthode ;
+        une classe exécutable de démonstration de ce que vous avez réalisé ; ce programme devra permettre de choisir (au clavier, ou via des arguments passés à la méthode main) un jeu et deux types de joueurs, puis lancer le jeu ; vous avez le choix de la manière exacte dont ce programme principal se comporte ; c'est aussi l'occasion de faire une démonstration d'éventuels jeux, types de joueurs, etc., que vous auriez réalisés en plus des énoncés.
+
+Le diagramme de classes complet est fourni sur la page du cours, pour vous aider à vérifier que vous avez tout fait. Les classes notées comme optionnelles ne sont à réaliser que si vous avez correctement réalisé tout le reste (sinon, elles ne seront pas prises en compte). Concentrez-vous d'abord sur le cœur du fil rouge, vous pourrez avoir une excellente note même si vous n'avez réalisé aucune « option ».
+
+Tout ceci devra être fourni sous la forme d'un unique fichier .zip contenant seulement les fichiers sources java (en particulier, ne pas inclure les .class ni les librairies de test) ainsi qu'un fichier README, à la racine de l'archive, listant les membres du groupes et d'éventuels points sur lesquels vous souhaitez porter notre attention (classes supplémentaires réalisées par exemple).
+
+---------------------------------------------------------------------------------------------------------------------
+Notation
+
+Vous serez notés sur
+
+    les classes et méthodes implémentées, et le fait qu'ils passent les tests,
+    la mise en œuvre dans votre classe de démonstration, qui nous montrera que vous avez compris l'utilisation des classes et méthodes, au-delà de la satisfaction des tests unitaires,
+    la clarté et la lisibilité de votre code.
+
+Nous nous réservons le droit, pour des groupes dans lesquels nous pensons que tout le monde n'a pas fourni le même travail, de faire passer des petits oraux (par groupe ou individuellement) et, le cas échéant, de différencier les notes au sein d'un même groupe.
