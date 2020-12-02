@@ -8,3 +8,6 @@ Contient des jeux .java en console
 
 ![Connect4](https://i.imgur.com/E2b9Gm4.gif)
 
+
+![Nim](https://i.imgur.com/8OHDWWa.gif)
+
