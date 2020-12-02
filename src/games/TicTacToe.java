@@ -154,11 +154,7 @@ public class TicTacToe extends AbstractGame{
     gameboard3[2][0]="2";
     gameboard3[3][0]="3";
 
-    //String chaine1=gameboard2[0][0]+" "+gameboard2[0][1]+" "+gameboard2[0][2];//ou alors changer de sens
-    //String chaine2=gameboard2[1][0]+" "+gameboard2[1][1]+" "+gameboard2[1][2];
-    //String chaine3=gameboard2[2][0]+" "+gameboard2[2][1]+" "+gameboard2[2][2];
-
-    String chaine1=gameboard3[0][0]+" "+gameboard3[0][1]+" "+gameboard3[0][2]+" "+gameboard3[0][3];//ou alors changer de sens
+    String chaine1=gameboard3[0][0]+" "+gameboard3[0][1]+" "+gameboard3[0][2]+" "+gameboard3[0][3];
     String chaine2=gameboard3[1][0]+" "+gameboard3[1][1]+" "+gameboard3[1][2]+" "+gameboard3[1][3];
     String chaine3=gameboard3[2][0]+" "+gameboard3[2][1]+" "+gameboard3[2][2]+" "+gameboard3[2][3];
     String chaine4=gameboard3[3][0]+" "+gameboard3[3][1]+" "+gameboard3[3][2]+" "+gameboard3[3][3];

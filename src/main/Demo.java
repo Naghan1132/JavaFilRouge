@@ -13,6 +13,9 @@ public class Demo{
   public static void main(String[] args){
     Scanner scanner = new Scanner(System.in);
 
+    System.out.print("\033[H\033[2J");//clear de console (CTRL+L)
+    System.out.flush();//clear de console  (CTRL+L)
+
     System.out.println("Bonjour, combien de joueurs humain êtes-vous ? (1 ou 2) ");
     String nb_humains=scanner.next();
     System.out.println(" ");

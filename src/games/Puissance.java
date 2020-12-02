@@ -50,19 +50,16 @@ public class Puissance extends AbstractGame{
   public ArrayList<Integer> validMoves(){ //OK => la longueur max de 'liste' est 7, car 7 collones
     ArrayList<Integer> liste = new ArrayList<>();
     int cpt=0;
-    System.out.println("Coups valides : ");
     for (int i=0;i<gameboard.length;i++){
       for (int j=0;j<gameboard[i].length;j++){
         if(i>=1){
           if(gameboard[i][j]==null && gameboard[i-1][j]!=null){
             liste.add(cpt);
-            System.out.println(cpt+": ("+i+","+j+")");
           }
         }
         else{// si i == 0 (première ligne), donc tout les coups valides si gameboard[i][j]==null
           if(gameboard[i][j]==null){
             liste.add(cpt);
-            System.out.println(cpt+": ("+i+","+j+")");
           }
         }
         cpt+=1;
@@ -163,7 +160,9 @@ public class Puissance extends AbstractGame{
     for (int i=0;i<gameboard.length;i++){
       for (int j=0;j<gameboard[i].length;j++){
         if (cpt==coup){
-          chaine+=cpt+" = ("+i+","+j+")";
+          int row=i+1;
+          int col=j+1;
+          chaine+=cpt+" = ("+row+","+col+")";
         }
         cpt+=1;
       }
@@ -173,29 +172,56 @@ public class Puissance extends AbstractGame{
   }
 
   public String situationToString(){//OK
-    String[][] gameboard2 = new String[6][7];
+    String[][] gameboard2 = new String[7][8];
+    int cpt=0;
     for(int i=0;i<gameboard.length;i++){
       for(int j=0;j<gameboard[i].length;j++){
         if(gameboard[i][j]==joueur1){
-          gameboard2[i][j]="X";
+          gameboard2[i+1][j+1]="X";
         }
         else if(gameboard[i][j]==joueur2){
-          gameboard2[i][j]="O";
+          gameboard2[i+1][j+1]="O";
         }
         else if(gameboard[i][j]==null){
-          gameboard2[i][j]=".";
+          gameboard2[i+1][j+1]=".";
         }
+        if(validMoves().contains(cpt)==true){
+          int row = i+1;
+          int col = j+1;
+          System.out.println(cpt+" = ("+row+","+col+")");
+        }
+        cpt+=1;
       }
     }
 
-    String chaine1=gameboard2[0][0]+" "+gameboard2[0][1]+" "+gameboard2[0][2]+" "+gameboard2[0][3]+" "+gameboard2[0][4]+" "+gameboard2[0][5]+" "+gameboard2[0][6];
-    String chaine2=gameboard2[1][0]+" "+gameboard2[1][1]+" "+gameboard2[1][2]+" "+gameboard2[1][3]+" "+gameboard2[1][4]+" "+gameboard2[1][5]+" "+gameboard2[1][6];
-    String chaine3=gameboard2[2][0]+" "+gameboard2[2][1]+" "+gameboard2[2][2]+" "+gameboard2[2][3]+" "+gameboard2[2][4]+" "+gameboard2[2][5]+" "+gameboard2[2][6];
-    String chaine4=gameboard2[3][0]+" "+gameboard2[3][1]+" "+gameboard2[3][2]+" "+gameboard2[3][3]+" "+gameboard2[3][4]+" "+gameboard2[3][5]+" "+gameboard2[3][6];
-    String chaine5=gameboard2[4][0]+" "+gameboard2[4][1]+" "+gameboard2[4][2]+" "+gameboard2[4][3]+" "+gameboard2[4][4]+" "+gameboard2[4][5]+" "+gameboard2[4][6];
-    String chaine6=gameboard2[5][0]+" "+gameboard2[5][1]+" "+gameboard2[5][2]+" "+gameboard2[5][3]+" "+gameboard2[5][4]+" "+gameboard2[5][5]+" "+gameboard2[5][6];
+    gameboard2[0][0]=" ";
+    gameboard2[0][1]="1";
+    gameboard2[0][2]="2";
+    gameboard2[0][3]="3";
+    gameboard2[0][4]="4";
+    gameboard2[0][5]="5";
+    gameboard2[0][6]="6";
+    gameboard2[0][7]="7";
+    gameboard2[1][0]="1";
+    gameboard2[2][0]="2";
+    gameboard2[3][0]="3";
+    gameboard2[4][0]="4";
+    gameboard2[5][0]="5";
+    gameboard2[6][0]="6";
+
+
+
+    String chaine1=gameboard2[0][0]+" "+gameboard2[0][1]+" "+gameboard2[0][2]+" "+gameboard2[0][3]+" "+gameboard2[0][4]+" "+gameboard2[0][5]+" "+gameboard2[0][6]+" "+gameboard2[0][7];
+    String chaine2=gameboard2[1][0]+" "+gameboard2[1][1]+" "+gameboard2[1][2]+" "+gameboard2[1][3]+" "+gameboard2[1][4]+" "+gameboard2[1][5]+" "+gameboard2[1][6]+" "+gameboard2[1][7];
+    String chaine3=gameboard2[2][0]+" "+gameboard2[2][1]+" "+gameboard2[2][2]+" "+gameboard2[2][3]+" "+gameboard2[2][4]+" "+gameboard2[2][5]+" "+gameboard2[2][6]+" "+gameboard2[2][7];
+    String chaine4=gameboard2[3][0]+" "+gameboard2[3][1]+" "+gameboard2[3][2]+" "+gameboard2[3][3]+" "+gameboard2[3][4]+" "+gameboard2[3][5]+" "+gameboard2[3][6]+" "+gameboard2[3][7];
+    String chaine5=gameboard2[4][0]+" "+gameboard2[4][1]+" "+gameboard2[4][2]+" "+gameboard2[4][3]+" "+gameboard2[4][4]+" "+gameboard2[4][5]+" "+gameboard2[4][6]+" "+gameboard2[4][7];
+    String chaine6=gameboard2[5][0]+" "+gameboard2[5][1]+" "+gameboard2[5][2]+" "+gameboard2[5][3]+" "+gameboard2[5][4]+" "+gameboard2[5][5]+" "+gameboard2[5][6]+" "+gameboard2[5][7];
+    String chaine7=gameboard2[6][0]+" "+gameboard2[6][1]+" "+gameboard2[6][2]+" "+gameboard2[6][3]+" "+gameboard2[6][4]+" "+gameboard2[6][5]+" "+gameboard2[6][6]+" "+gameboard2[6][7];
 
     String chaine=System.lineSeparator();
+    chaine+=chaine7;
+    chaine+=System.lineSeparator();
     chaine+=chaine6;
     chaine+=System.lineSeparator();
     chaine+=chaine5;
