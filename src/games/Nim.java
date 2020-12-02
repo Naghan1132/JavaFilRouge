@@ -27,6 +27,8 @@ public class Nim extends AbstractGame{
 
   @Override
   public String situationToString(){ //OK
+    System.out.println("");
+    System.out.println("Représentation des allumettes restantes :");
     String situation = "Il reste "+taille_courante+" allumettes";
     String allumette = "---๐"; //Petit ajout bonus : représenter les allumettes restantes
     int cpt=0;
