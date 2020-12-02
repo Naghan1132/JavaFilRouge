@@ -110,7 +110,9 @@ public class TicTacToe extends AbstractGame{
     for (int i=0;i<gameboard.length;i++){
       for (int j=0;j<gameboard[i].length;j++){
         if (cpt==coup){
-          chaine+=cpt+" = ("+i+","+j+")";
+          int row = i+1;
+          int col = j+1;
+          chaine+=cpt+" = ("+row+","+col+")";
         }
         cpt+=1;
       }
@@ -121,7 +123,6 @@ public class TicTacToe extends AbstractGame{
 
   @Override
   public String situationToString(){
-    String[][] gameboard2 = new String[3][3];
     String[][] gameboard3 = new String[4][4];
     int cpt=0;
     System.out.println("Coups valides : ");
@@ -137,19 +138,21 @@ public class TicTacToe extends AbstractGame{
           gameboard3[i+1][j+1]=".";
         }
         if(validMoves().contains(cpt)==true){
-          System.out.println(cpt+" = ("+i+","+j+")");
+          int row = i+1;
+          int col = j+1;
+          System.out.println(cpt+" = ("+row+","+col+")");
         }
         cpt+=1;
       }
     }
 
     gameboard3[0][0]=" ";
-    gameboard3[0][1]="0";
-    gameboard3[0][2]="1";
-    gameboard3[0][3]="2";
-    gameboard3[1][0]="0";
-    gameboard3[2][0]="1";
-    gameboard3[3][0]="2";
+    gameboard3[0][1]="1";
+    gameboard3[0][2]="2";
+    gameboard3[0][3]="3";
+    gameboard3[1][0]="1";
+    gameboard3[2][0]="2";
+    gameboard3[3][0]="3";
 
     //String chaine1=gameboard2[0][0]+" "+gameboard2[0][1]+" "+gameboard2[0][2];//ou alors changer de sens
     //String chaine2=gameboard2[1][0]+" "+gameboard2[1][1]+" "+gameboard2[1][2];
