@@ -17,7 +17,7 @@ public class Demo{
     String nb_humains=scanner.next();
     if(Integer.parseInt(nb_humains)==1){
       System.out.println("Voulez-vous un adversaire 'intelligent'(tapez : 1) ou qui joue de manière aléatoire (tapez : 2) ?");
-      System.out.println("PS : L'adversaire 'intelligent' ne fonctionne pas avec le puissance4");
+      System.out.println("PS: L'adversaire 'intelligent' ne fonctionne pas avec le puissance4");
       String IA=scanner.next();
       if(Integer.parseInt(IA)==1){
         System.out.println("Quel est ton nom ?");
