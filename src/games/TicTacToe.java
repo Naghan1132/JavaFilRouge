@@ -122,18 +122,19 @@ public class TicTacToe extends AbstractGame{
   @Override
   public String situationToString(){
     String[][] gameboard2 = new String[3][3];
+    String[][] gameboard3 = new String[4][4];
     int cpt=0;
     System.out.println("Coups valides : ");
     for(int i=0;i<gameboard.length;i++){
       for(int j=0;j<gameboard[i].length;j++){
         if(gameboard[i][j]==joueur1){
-          gameboard2[i][j]="X";
+          gameboard3[i+1][j+1]="X";
         }
         else if(gameboard[i][j]==joueur2){
-          gameboard2[i][j]="O";
+          gameboard3[i+1][j+1]="O";
         }
         else if(gameboard[i][j]==null){
-          gameboard2[i][j]=".";
+          gameboard3[i+1][j+1]=".";
         }
         if(validMoves().contains(cpt)==true){
           System.out.println(cpt+" = ("+i+","+j+")");
@@ -141,9 +142,23 @@ public class TicTacToe extends AbstractGame{
         cpt+=1;
       }
     }
-    String chaine1=gameboard2[0][0]+" "+gameboard2[0][1]+" "+gameboard2[0][2];
-    String chaine2=gameboard2[1][0]+" "+gameboard2[1][1]+" "+gameboard2[1][2];
-    String chaine3=gameboard2[2][0]+" "+gameboard2[2][1]+" "+gameboard2[2][2];
+
+    gameboard3[0][0]=" ";
+    gameboard3[0][1]="0";
+    gameboard3[0][2]="1";
+    gameboard3[0][3]="2";
+    gameboard3[1][0]="0";
+    gameboard3[2][0]="1";
+    gameboard3[3][0]="2";
+
+    //String chaine1=gameboard2[0][0]+" "+gameboard2[0][1]+" "+gameboard2[0][2];//ou alors changer de sens
+    //String chaine2=gameboard2[1][0]+" "+gameboard2[1][1]+" "+gameboard2[1][2];
+    //String chaine3=gameboard2[2][0]+" "+gameboard2[2][1]+" "+gameboard2[2][2];
+
+    String chaine1=gameboard3[0][0]+" "+gameboard3[0][1]+" "+gameboard3[0][2]+" "+gameboard3[0][3];//ou alors changer de sens
+    String chaine2=gameboard3[1][0]+" "+gameboard3[1][1]+" "+gameboard3[1][2]+" "+gameboard3[1][3];
+    String chaine3=gameboard3[2][0]+" "+gameboard3[2][1]+" "+gameboard3[2][2]+" "+gameboard3[2][3];
+    String chaine4=gameboard3[3][0]+" "+gameboard3[3][1]+" "+gameboard3[3][2]+" "+gameboard3[3][3];
 
     String chaine=System.lineSeparator();
     chaine+=chaine1;
@@ -152,7 +167,8 @@ public class TicTacToe extends AbstractGame{
     chaine+=System.lineSeparator();
     chaine+=chaine3;
     chaine+=System.lineSeparator();
-
+    chaine+=chaine4;
+    chaine+=System.lineSeparator();
     return chaine;
   }
 
